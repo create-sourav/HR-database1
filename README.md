@@ -1,5 +1,5 @@
 
-# 🧠 HR Analytics & Attrition Risk Dashboard – Power BI Project
+#  HR Analytics & Attrition Risk Dashboard – Power BI Project
 
 ## 📌 Project Overview
 
