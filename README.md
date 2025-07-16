@@ -109,3 +109,18 @@ DIVIDE(
     CALCULATE(COUNTROWS(EmployeeData), EmployeeData[Attrition] = "Yes"),
     COUNTROWS(EmployeeData)
 )
+
+
+## ✅ Business Recommendations
+Early-Career Retention Programs
+
+Target employees aged 20–30 in Sales and Job Level 1 roles.
+Provide mentorship, growth tracks, and salary review at 12-month mark.
+Restructure Entry-Level Compensation
+Sales Representatives are underpaid compared to peers in other departments.
+Introduce performance-based incentives and clearer promotion paths.
+Ignore False Positives
+Avoid overfitting models based on DistanceFromHome, OverTime, or Marital Status, which show no clear link to attrition in this dataset.
+
+## 🧠 Conclusion
+This HR analytics dashboard enables a clear understanding of employee churn risk factors using demographic and behavioral indicators. It equips HR leaders to take data-backed decisions to improve employee satisfaction, especially in early-career and sales-heavy teams.
