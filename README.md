@@ -1,126 +1,102 @@
-
-#  HR Analytics & Attrition Risk Dashboard – Power BI Project
-
-## 📌 Project Overview
-
-This project explores employee attrition patterns in a corporate HR dataset to identify **risk factors driving employee churn**, especially among **early-career professionals** in the **Sales department**. The goal is to extract actionable insights that can help HR teams design better retention strategies using Power BI.
+# 💼 HR Analytics & Attrition Risk Dashboard — Power BI + Machine Learning Project
 
 ---
 
-## 🎯 Objective
+## 📌 Project Overview
+This project explores employee attrition patterns in a corporate HR dataset to identify key risk factors driving churn, particularly among early-career professionals in the **Sales Department**.  
+The analysis combines **Power BI visualization** and **Machine Learning modeling** to create a 360° view of attrition risk.
 
-- Identify **departments**, **age groups**, and **job levels** most prone to attrition  
-- Understand **behavioral and financial indicators** leading to employee exits  
-- Recommend **data-driven HR interventions** to reduce attrition and improve satisfaction
+---
+
+## 🎯 Objectives
+- Identify departments, age groups, and job levels most prone to attrition  
+- Understand behavioral and financial factors leading to exits  
+- Build an ML model to predict attrition probability for each employee  
+- Recommend **data-driven HR interventions** to reduce turnover  
 
 ---
 
 ## 📁 Dataset Details
-
-- **Dataset Name**: `HR database1`
-- **Total Records**: ~1,470 employees  
-- **Key Columns**:
-  - **Demographics**: Age, Gender, EducationField, MaritalStatus
-  - **Employment**: JobLevel, Department, JobRole, MonthlyIncome, YearsAtCompany
-  - **Work Conditions**: OverTime, DistanceFromHome
-  - **Target**: `Attrition` (Yes/No)
-
----
-
-## 🧰 Tools & Technologies Used
-
-- **Power BI Desktop** – for interactive dashboard & data modeling  
-- **DAX (Data Analysis Expressions)** – for calculations and KPIs  
-- **Excel** – for initial cleanup  
-- **GitHub** – for version control and portfolio presentation
+| Item | Description |
+|------|--------------|
+| **Dataset Name** | HR database1 |
+| **Total Records** | ~1,470 employees |
+| **Target** | `Attrition` (Yes / No) |
+| **Key Columns** |  
+Demographics → Age, Gender, EducationField, MaritalStatus  
+Employment → JobLevel, Department, JobRole, MonthlyIncome, YearsAtCompany  
+Work Conditions → OverTime, DistanceFromHome  
 
 ---
 
-## 📊 Key Insights
+## 🧰 Tools & Technologies
+- **Power BI Desktop** — interactive dashboard & data modeling  
+- **DAX (Analysis Expressions)** — KPIs & measures  
+- **Python (Colab)** — EDA, preprocessing, Random Forest ML model  
+- **Excel** — initial cleanup  
+- **GitHub** — portfolio storage  
+
+---
+
+## 📊 Power BI Insights
 
 ### 🔺 High-Risk Segments
-- **Sales Department** has the **highest attrition rate (20.63%)**
-- Attrition is heavily concentrated in **Job Level 1**
-- **Young employees (age 20–30)** have the highest churn rates
-- Employees with **Marketing or Sales education background** are more likely to leave
-- **Sales Representatives** are the most vulnerable role
+- **Sales Department** has the highest attrition (≈ 20.6 %).  
+- **Job Level 1** employees show the most churn.  
+- **Age 20 – 30** group = highest leavers.  
+- **Marketing/Sales education** fields see higher attrition.  
+- **Sales Representatives** are the most vulnerable role.
 
 ### 💰 Monthly Income
-- Strong inverse relationship between **monthly income** and **attrition**
-- **Sales Executives & Managers** (higher income) show lower attrition
-- **Sales Representatives & Lab Technicians** (lower income) show higher attrition
+- Strong inverse relation → higher income = lower attrition.  
+- Sales Executives & Managers (high pay) → stable.  
+- Sales Reps & Lab Technicians (low pay) → at-risk.
 
 ### 🚫 Non-Significant Factors
-- **Distance From Home**, **OverTime**, and **Marital Status** have negligible impact on attrition in this dataset
+`DistanceFromHome`, `OverTime`, and `MaritalStatus` show minimal impact.
 
 ---
 
-## 📈 Visuals in Dashboard
-
+## 📈 Dashboard Visuals
 - 📉 Attrition Rate by Age  
 - 📊 Attrition Rate and Monthly Income by Department & Gender  
-- 📊 Attrition Rate by Job Role  
-- 📊 Attrition Rate by Job Level  
-- 📉 Combined trend of Income, Age, and Distance vs Attrition  
-- 🧮 KPI Cards:  
-  - Sum of Monthly Income (Total)  
-  - Sum of Monthly Income (Attrition)
-
----
-
-## 🖼️ Dashboard Screenshot
-
-[![Attrition Analytics Dashboard](Attrition_Analytics.png)](Attrition_Analytics.png)
+- 📊 Attrition Rate by Job Role and Job Level  
+- 📉 Combined trend of Income, Age & Distance vs Attrition  
+- 🧮 KPI Cards → Total Income vs Income of Attrition Employees  
 
 ---
 
 ## 🧮 DAX Measures Used
-
 ```DAX
 -- Attrition Count
-Attrition Count = CALCULATE(COUNTROWS(EmployeeData), EmployeeData[Attrition] = "Yes")
+Attrition Count =
+CALCULATE(COUNTROWS(EmployeeData), EmployeeData[Attrition] = "Yes")
 
 -- Attrition Rate (%)
-Attrition Rate (%) = 
+Attrition Rate (%) =
 DIVIDE(
     CALCULATE(COUNTROWS(EmployeeData), EmployeeData[Attrition] = "Yes"),
     COUNTROWS(EmployeeData)
 )
 
--- Sum of MonthlyIncome (Attrition)
-Sum of MonthlyIncome (Attrition) = 
+-- Sum of Monthly Income (Attrition)
+Sum of MonthlyIncome (Attrition) =
 CALCULATE(SUM(EmployeeData[MonthlyIncome]), EmployeeData[Attrition] = "Yes")
 
--- Total MonthlyIncome
+-- Total Monthly Income
 Total MonthlyIncome = SUM(EmployeeData[MonthlyIncome])
 
--- Average Distance from Home (Optional)
+-- Average Distance from Home
 Average DistanceFromHome = AVERAGE(EmployeeData[DistanceFromHome])
 
 -- Attrition Rate by Department
-Attrition Rate by Department = 
-CALCULATE([Attrition Count], ALLEXCEPT(EmployeeData, EmployeeData[Department])) 
-    / 
+Attrition Rate by Department =
+CALCULATE([Attrition Count], ALLEXCEPT(EmployeeData, EmployeeData[Department])) /
 CALCULATE(COUNT(EmployeeData[EmployeeNumber]), ALLEXCEPT(EmployeeData, EmployeeData[Department]))
 
--- Attrition Rate by JobLevel (Matrix format)
-Attrition Rate by JobLevel = 
+-- Attrition Rate by JobLevel
+Attrition Rate by JobLevel =
 DIVIDE(
     CALCULATE(COUNTROWS(EmployeeData), EmployeeData[Attrition] = "Yes"),
     COUNTROWS(EmployeeData)
 )
-
-
-## ✅ Business Recommendations
-Early-Career Retention Programs
-
-Target employees aged 20–30 in Sales and Job Level 1 roles.
-Provide mentorship, growth tracks, and salary review at 12-month mark.
-Restructure Entry-Level Compensation
-Sales Representatives are underpaid compared to peers in other departments.
-Introduce performance-based incentives and clearer promotion paths.
-Ignore False Positives
-Avoid overfitting models based on DistanceFromHome, OverTime, or Marital Status, which show no clear link to attrition in this dataset.
-
-## 🧠 Conclusion
-This HR analytics dashboard enables a clear understanding of employee churn risk factors using demographic and behavioral indicators. It equips HR leaders to take data-backed decisions to improve employee satisfaction, especially in early-career and sales-heavy teams.
