@@ -106,8 +106,11 @@ Employees with predicted probability ≥ 0.40 are classified as High Risk.
 ### ROC Curve — Performance Evaluation
 ![ROC Curve](ROC%20curve.png)
 
+
 ### Attrition Probability Distribution
 ![Probability Distribution](probability%20distribution.png)
+
+
 
 ### Feature Importance — Top 10 Predictors
 ![Top 10 Features](Top%2010.png)
