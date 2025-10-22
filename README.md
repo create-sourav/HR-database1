@@ -58,7 +58,7 @@ The analysis combines **Power BI visualization** and **Machine Learning modeling
 ---
 
 ## 📈 EDA Visuals (Python Exploration)
-![EDA Dashboard](EDA_dashboard.png)
+![EDA Dashboard](EDA%20dashboard.png)
 
 ---
 
@@ -104,13 +104,13 @@ Employees with predicted probability ≥ 0.40 are classified as High Risk.
 ## 📉 Model Visualizations
 
 ### ROC Curve — Performance Evaluation
-![ROC Curve](ROC_curve.png)
+![ROC Curve](ROC%20curve.png)
 
-### Attrition Probability Distribution — Actual vs Predicted
-![Probability Distribution](probability_distribution.png)
+### Attrition Probability Distribution
+![Probability Distribution](probability%20distribution.png)
 
 ### Feature Importance — Top 10 Predictors
-![Top 10 Features](Top_10.png)
+![Top 10 Features](Top%2010.png)
 
 ---
 
