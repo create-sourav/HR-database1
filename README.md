@@ -94,7 +94,7 @@ CALCULATE(COUNT(EmployeeData[EmployeeNumber]), ALLEXCEPT(EmployeeData, EmployeeD
 | **Train/Test Split** | 80 / 20 (stratified) |
 | **Imbalance Handling** | BorderlineSMOTE() |
 | **Model** | RandomForestClassifier() (tuned) |
-| **Performance** | Accuracy ≈ 0.867  ROC-AUC ≈ 0.805 |
+| **Performance** | Accuracy ≈ 0.86  ROC-AUC ≈ 0.80 |
 
 **🎯 Optimal Probability Threshold ≈ 0.34**  
 Employees with predicted probability ≥ 0..34 are classified as High Risk.
