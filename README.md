@@ -108,7 +108,7 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 
 ### Attrition Probability Distribution
-![Probability Distribution](probability%20distribution.png)
+![distribution](distribution.png)
 
 
 
