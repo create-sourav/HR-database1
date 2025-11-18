@@ -117,17 +117,20 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 ---
 
-## 🧮 Top Influential Features
-1️⃣ OverTime_Yes  
-2️⃣ StockOptionLevel  
-3️⃣ JobSatisfaction  
-4️⃣ JobLevel  
-5️⃣ MaritalStatus_Single  
-6️⃣ EnvironmentSatisfaction  
-7️⃣ Age  
-8️⃣ MonthlyIncome  
-9️⃣ YearsAtCompany  
-🔟 TotalWorkingYears  
+## 🧮 Top 10 Most Influential Features
+| Rank | Feature                | Importance |
+|------|------------------------|------------|
+| 1️⃣  | OverTime_Yes           | 0.145      |
+| 2️⃣  | StockOptionLevel       | 0.075      |
+| 3️⃣  | JobSatisfaction        | 0.060      |
+| 4️⃣  | MaritalStatus_Single   | 0.050      |
+| 5️⃣  | YearsAtCompany         | 0.045      |
+| 6️⃣  | Age                    | 0.042      |
+| 7️⃣  | MonthlyIncome          | 0.040      |
+| 8️⃣  | TotalWorkingYears      | 0.038      |
+| 9️⃣  | JobInvolvement         | 0.036      |
+| 🔟   | YearsWithCurrManager   | 0.035      |
+
 
 ---
 
