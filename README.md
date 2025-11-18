@@ -58,7 +58,7 @@ The analysis combines **Power BI visualization** and **Machine Learning modeling
 ---
 
 ## 📈 EDA Visuals (Python Exploration)
-![EDA Dashboard](EDA%20dashboard.png)
+![EDADash](EDAdash.png)
 
 ---
 
@@ -92,19 +92,19 @@ CALCULATE(COUNT(EmployeeData[EmployeeNumber]), ALLEXCEPT(EmployeeData, EmployeeD
 | **Encoding** | pd.get_dummies(X, drop_first=True, dtype=int) + LabelEncoder for target |
 | **Scaling** | StandardScaler() |
 | **Train/Test Split** | 80 / 20 (stratified) |
-| **Imbalance Handling** | SMOTE() |
+| **Imbalance Handling** | BorderlineSMOTE() |
 | **Model** | RandomForestClassifier() (tuned) |
-| **Performance** | Accuracy ≈ 0.85 · ROC-AUC ≈ 0.88 |
+| **Performance** | Accuracy ≈ 0.867  ROC-AUC ≈ 0.805 |
 
-**🎯 Optimal Probability Threshold ≈ 0.395 (≈ 0.40)**  
-Employees with predicted probability ≥ 0.40 are classified as High Risk.
+**🎯 Optimal Probability Threshold ≈ 0.34**  
+Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 ---
 
 ## 📉 Model Visualizations
 
 ### ROC Curve — Performance Evaluation
-![ROC Curve](ROC%20curve.png)
+![ROC](ROC.png)
 
 
 ### Attrition Probability Distribution
@@ -112,8 +112,8 @@ Employees with predicted probability ≥ 0.40 are classified as High Risk.
 
 
 
-### Feature Importance — Top 10 Predictors
-![Top 10 Features](Top%2010.png)
+### Feature Importance — Top 10 Predictaed Influencial Features 
+![Features](Features.png)
 
 ---
 
