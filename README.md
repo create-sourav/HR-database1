@@ -94,7 +94,7 @@ CALCULATE(COUNT(EmployeeData[EmployeeNumber]), ALLEXCEPT(EmployeeData, EmployeeD
 | **Train/Test Split** | 80 / 20 (stratified) |
 | **Imbalance Handling** | BorderlineSMOTE() |
 | **Model** | RandomForestClassifier() (tuned) |
-| **Performance** | Accuracy ≈ 0.86  ROC-AUC ≈ 0.80 |
+| **Performance** | Accuracy ≈ 0.83  ROC-AUC ≈ 0.80 |
 
 **🎯 Optimal Probability Threshold ≈ 0.34**  
 Employees with predicted probability ≥ 0..34 are classified as High Risk.
@@ -117,22 +117,46 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 ---
 
+## 📊 Model Performance
+
+| Metric | Score |
+|---------|-------|
+| ** Test Accuracy** | 0.83 |
+| ** Train Accuracy** | 0.97|
+| **Recall adjusted**  | 0.83 |
+| **F1 Score** | 0.82|
+| **ROC-AUC** | 0.80 |
+
+----
 ## 🧮 Top 10 Most Influential Features
-| Rank | Feature                | Importance |
-|------|------------------------|------------|
-| 1️⃣  | OverTime_Yes           | 0.145      |
-| 2️⃣  | StockOptionLevel       | 0.075      |
-| 3️⃣  | JobSatisfaction        | 0.060      |
-| 4️⃣  | MaritalStatus_Single   | 0.050      |
-| 5️⃣  | YearsAtCompany         | 0.045      |
-| 6️⃣  | Age                    | 0.042      |
-| 7️⃣  | MonthlyIncome          | 0.040      |
-| 8️⃣  | TotalWorkingYears      | 0.038      |
-| 9️⃣  | JobInvolvement         | 0.036      |
-| 🔟   | YearsWithCurrManager   | 0.035      |
+| Rank | Feature              | Importance |
+|------|----------------------|------------|
+| 1️⃣  | OverTime_Yes         | 0.110      |
+| 2️⃣  | YearsWithCurrManager | 0.065      |
+| 3️⃣  | StockOptionLevel     | 0.055      |
+| 4️⃣  | Age                  | 0.048      |
+| 5️⃣  | JobLevel             | 0.046      |
+| 6️⃣  | YearsAtCompany       | 0.045      |
+| 7️⃣  | JobSatisfaction      | 0.043      |
+| 8️⃣  | TotalWorkingYears    | 0.041      |
+| 9️⃣  | YearsInCurrentRole   | 0.040      |
+| 🔟   | MonthlyIncome        | 0.039      |
+
 
 
 ---
+
+## 🧩 Final Model Interpretation
+
+| Probability Range | Risk Level | HR Action |
+|--------------------|-------------|------------|
+| 0.00 – 0.28 | 🟢 Low Risk | Normal monitoring |
+| 0.28 – 0.50 | 🟡 Moderate Risk | Review workload / satisfaction |
+| 0.51 – 0.70 | 🟠 High Risk | Engage proactively |
+| 0.71 – 1.00 | 🔴 Very High Risk | Immediate retention focus |
+
+---
+
 
 ## ✅ Business Recommendations
 
