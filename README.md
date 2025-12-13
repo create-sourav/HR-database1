@@ -38,7 +38,7 @@ The analysis combines **Power BI visualization** and **Machine Learning modeling
 ## 📊 Power BI Dashboard
 
 ### 📈 Attrition Analytics Dashboard
-![Power BI Dashboard](Attrition_Analytics.png)
+![Power BI Dashboard](powerbidash.png)
 
 ### 🔺 High-Risk Segments
 - **Sales Department** → highest attrition (~20.6%)  
@@ -55,10 +55,6 @@ The analysis combines **Power BI visualization** and **Machine Learning modeling
 ### 🚫 Non-Significant Factors
 `DistanceFromHome`, `OverTime`, `MaritalStatus` → minimal impact on attrition
 
----
-
-## 📈 EDA Visuals (Python Exploration)
-![EDADash](EDAdash.png)
 
 ---
 
@@ -104,7 +100,7 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 ## 📉 Model Visualizations
 
 ### ROC Curve — Performance Evaluation
-![Roc](Roc.png)
+![Roc](roc.png)
 
 
 ### Attrition Probability Distribution
@@ -113,7 +109,6 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 
 ### Feature Importance — Top 10 Predictaed Influencial Features 
-![Features](Features.png)
 
 ---
 
