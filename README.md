@@ -145,8 +145,8 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 | Probability Range | Risk Level | HR Action |
 |--------------------|-------------|------------|
-| 0.00 – 0.28 | 🟢 Low Risk | Normal monitoring |
-| 0.28 – 0.50 | 🟡 Moderate Risk | Review workload / satisfaction |
+| 0.00 – 0.30 | 🟢 Low Risk | Normal monitoring |
+| 0.30 – 0.50 | 🟡 Moderate Risk | Review workload / satisfaction |
 | 0.51 – 0.70 | 🟠 High Risk | Engage proactively |
 | 0.71 – 1.00 | 🔴 Very High Risk | Immediate retention focus |
 
