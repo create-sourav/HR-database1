@@ -194,14 +194,9 @@ It enables HR teams to:
 
 ## 🚀 How to Use This Project
 
-1. **Clone the repository:**
-```bash
-   git clone https://github.com/yourusername/HR-Analytics-Attrition-Dashboard.git
-```
+ **Open Power BI file** (if included) to explore the interactive dashboard
 
-2. **Open Power BI file** (if included) to explore the interactive dashboard
-
-3. **Run the Jupyter Notebook** to reproduce the ML model:
+ **Run the Jupyter Notebook** to reproduce the ML model:
 ```bash
    jupyter notebook HR_Analytics.ipynb
 ```
