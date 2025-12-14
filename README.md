@@ -41,7 +41,7 @@ The analysis combines **Power BI visualization** and **Machine Learning modeling
 ![Power BI Dashboard](powerbidash.png)
 
 ### 🔺 High-Risk Segments
-- **Sales Department** → highest attrition (~20.6%)  
+- **Sales Department** → highest attrition  
 - **Job Level 1** employees show the most churn  
 - **Age 20–30** → highest leavers  
 - **Marketing/Sales** education → higher attrition  
@@ -92,8 +92,8 @@ CALCULATE(COUNT(EmployeeData[EmployeeNumber]), ALLEXCEPT(EmployeeData, EmployeeD
 | **Model** | RandomForestClassifier() (tuned) |
 | **Performance** | Accuracy ≈ 0.83  ROC-AUC ≈ 0.80 |
 
-**🎯 Optimal Probability Threshold ≈ 0.34**  
-Employees with predicted probability ≥ 0..34 are classified as High Risk.
+**🎯 Optimal Probability Threshold ≈ 0.36**  
+Employees with predicted probability ≥ 0.36 are classified as High Risk.
 
 ---
 
@@ -145,8 +145,8 @@ Employees with predicted probability ≥ 0..34 are classified as High Risk.
 
 | Probability Range | Risk Level | HR Action |
 |--------------------|-------------|------------|
-| 0.00 – 0.30 | 🟢 Low Risk | Normal monitoring |
-| 0.30 – 0.50 | 🟡 Moderate Risk | Review workload / satisfaction |
+| 0.00 – 0.36 | 🟢 Low Risk | Normal monitoring |
+| 0.36 – 0.50 | 🟡 Moderate Risk | Review workload / satisfaction |
 | 0.51 – 0.70 | 🟠 High Risk | Engage proactively |
 | 0.71 – 1.00 | 🔴 Very High Risk | Immediate retention focus |
 
