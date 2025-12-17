@@ -190,6 +190,8 @@ Selected through ROC curve analysis to balance sensitivity and specificity.
 
 ---
 
+![ROC_AUC_Curve](roc.png)
+
 ## 🔝 Top 10 Most Influential Features
 
 | Rank | Feature | Importance | Insight |
@@ -207,6 +209,7 @@ Selected through ROC curve analysis to balance sensitivity and specificity.
 
 **Key Takeaway:** Work-life balance (OverTime) is by far the strongest predictor at 13.5% importance, followed by management relationships (7.6%) and tenure factors. Together, these top 3 features account for nearly 27% of the model's decision-making.
 
+![Probability ditribution](distribution.png)
 ---
 
 ## 🎯 Risk Segmentation & Threshold Strategy
