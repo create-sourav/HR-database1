@@ -428,47 +428,6 @@ Visualizes the top 10 predictive features, highlighting OverTime as the dominant
 
 ---
 
-## 🚀 Getting Started
-
-### Running in Google Colab
-
-```python
-# 1. Open Google Colab
-# Visit: https://colab.research.google.com/
-
-# 2. Install required packages
-!pip install crewai
-!pip install google-generativeai
-!pip install imbalanced-learn
-
-# 3. Set up Gemini API Key
-import os
-os.environ["GEMINI_API_KEY"] = "your_api_key_here"
-
-# 4. Upload the HR dataset
-from google.colab import files
-uploaded = files.upload()
-
-# 5. Run the notebook:
-# - Data exploration and visualization
-# - Model training and evaluation
-# - AI recommendation system
-```
-
-### Power BI Setup
-
-```
-1. Open Power BI Desktop
-2. Load HR_database1.csv
-3. Import DAX measures (provided in documentation)
-4. Create visualizations:
-   - Attrition by Department
-   - Income distribution
-   - Age group analysis
-   - Risk segment dashboard
-5. Publish to Power BI Service (optional)
-```
-
 ### Key Implementation Steps
 
 ```python
@@ -531,18 +490,6 @@ for employee, prob, risk in zip(employees, probabilities, risk_segments):
 - 🤖 **AI-powered strategies** for retention planning
 - 📊 **Interactive dashboards** for real-time monitoring
 
-### Return on Investment (ROI)
-
-**Assumptions:**
-- Average cost to replace an employee: $50,000
-- Current attrition rate: 16.1% (237 employees)
-- Predicted reduction with interventions: 20-30%
-
-**Potential Savings:**
-- Annual attrition cost: 237 × $50,000 = $11.85M
-- With 25% reduction: ~60 employees saved
-- **Estimated annual savings: $3M+**
-
 ---
 
 ## 📊 Project Structure
@@ -559,59 +506,7 @@ HR-Analytics-Attrition-Dashboard/
 └── README.md                       # Project documentation
 ```
 
----
 
-## 🔄 Model Maintenance & Deployment
-
-### Recommended Update Schedule
-
-| Frequency | Activity |
-|-----------|----------|
-| **Weekly** | Monitor prediction accuracy on new hires |
-| **Monthly** | Update risk scores for existing employees |
-| **Quarterly** | Retrain model with new attrition data |
-| **Bi-Annual** | Review feature importance and threshold |
-| **Annual** | Comprehensive model evaluation and strategy review |
-
-### Production Deployment Considerations
-
-1. **Data Pipeline:**
-   - Automated data collection from HRIS
-   - Regular data quality checks
-   - Feature engineering automation
-
-2. **Model Serving:**
-   - Batch prediction for existing employees
-   - Real-time scoring for new hire assessments
-   - Integration with HR systems
-
-3. **Monitoring:**
-   - Track prediction accuracy over time
-   - Detect data drift and concept drift
-   - A/B test retention interventions
-
-4. **Governance:**
-   - Document model decisions for audit trail
-   - Ensure GDPR/privacy compliance
-   - Regular bias and fairness audits
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/EnhancedAnalytics`)
-3. Commit your changes (`git commit -m 'Add new attrition factor analysis'`)
-4. Push to the branch (`git push origin feature/EnhancedAnalytics`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
