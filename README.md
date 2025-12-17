@@ -256,7 +256,7 @@ def attrition_risk(p):
                      ┌───────────────────┴────────────────┐
                      │       AI DECISION LAYER            │
                      │  • CrewAI orchestration            │
-                     │  • Gemini 2.0 Flash reasoning      │
+                     │  • Gemini 2.5 Flash reasoning      │
                      │  • Generates HR recommendations    │
                      └────────────────────────────────────┘
 ```
@@ -305,7 +305,7 @@ def attrition_risk(p):
 Agent: HR Retention Strategist
 ├── Role: Strategic HR advisor
 ├── Goal: Generate actionable retention recommendations
-├── LLM: Google Gemini 2.0 Flash
+├── LLM: Google Gemini 2.5 Flash
 ├── Inputs: Attrition probability, Risk segment
 ├── Output: Concise business recommendations
 └── Constraints: No access to raw data or model details
@@ -338,7 +338,7 @@ and workload balance. Review compensation against market benchmarks.
 Consider role enrichment opportunities.
 ```
 
-**For High Risk Employee (0.62 probability):**
+**For High Risk Employee (0.40 probability):**
 ```
 Recommendation: Immediate stay interview required. Investigate overtime 
 patterns and manager relationship. Prepare retention offer including 
